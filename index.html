@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>area-chart China-USA</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="//d3js.org/colorbrewer.v1.js"></script>
+
+    <link rel='stylesheet' href='assignment2.css'>
+  </head>
+  <body>
+
+    <div class='title'>
+
+
+    <h1>The US economy under the weight of China
+    </h1>
+
+    <img src='us-china-trade.jpg'>
+
+    </div>
+
+    <div class='article'>
+
+      <p>The so-called trade war triggered by the US against China has dominated the news cycle for weeks. In February, President Trump announced his intention to impose tariffs on Chinese steel and aluminium. Beijing retaliated with a 25% duty increase on soybeans and other US goods.</p>
+
+    <p>Washington justified its crackdown by accusing China of theft of intellectual property. Then came the escalation of threats.</p>
+    <p>However, the two largest world economies are strongly interconnected. These recent developments beg the question: does China have the means to weaken the US economy?
+</p>
+
+    <p><strong>US has the world's largest trade deficit: thank you China!</strong></p>
+
+
+    <p>In 2017, the US goods trade deficit almost reached $800bn. Although it diminishes to $556 billion if we include services, it's the world largest deficit.</p>
+
+    <p>To reduce this considerable trade imbalance and 'make America great again', President Trump  decided to pass protectionist measures aiming the US's biggest importer: China.</p>
+
+
+
+    <h2 id='areachart-title'>US increasing trade deficit with China since 1985</h2>
+
+    <div id='areachart'>
+    </div>
+
+<!-- Each of my d3 graph are independent js file. This way my code is cleaner and it's easier for someone else to look at it and understand its different parts !-->
+    <script src='area_graph.js'></script>
+
+    <p>$375 billion is how much the US lost last year in trading with Beijing. Why? The value of US exports is four times smaller than Chinese exports to America. </p>
+
+    <p>The deficit has grown 150 times over the course of 30 years. Today, the trade imbalance with China alone accounts for almost half of the total US goods trade deficit.</p>
+
+    <p>And the grip China has on the US economy doesn't stop here.</p>
+
+
+    <p><strong>US foreign debt: the weight of China</strong><p>
+
+    <p>In December 2017, foreign countries owned more than $6 trillion of US's public debt. That's six times more than in 2000.</p>
+
+    <p>China is the main foreign holder with $1.2 trillion closely followed by Japan with $1.1 trillion. The two countries are, by far, the largest American foreign bankers and it has stayed unchanged for decades. </p>
+
+    <p>China and Japan are buying dollars in massive quantities in order to keep the US currency value higher than their own currency. Because of this, their exports are more affordable then more attractive for the United States.</p>
+
+
+
+   <h2 id='treemap-title'>
+     US debt hold by foreign countries in 2017
+   </h2>
+  <p class='graph-annotations'>The colors indicate the continent the countries belong to</p>
+   <div id='treemap'>
+   </div>
+
+   <p>Asian countries hold the largest share of the US debt followed by European countries whereas American countries acquired very little US debt.
+
+   <p><strong>The growth of the debt and the rise of China</strong></p>
+
+  <p>Foreigners have never owned as much US debt as today mainly because Washington has been increasingly relying on bonds to finance its budget deficits. </p>
+
+
+   <script src='treemap.js'></script>
+
+   <h2 id='lineschart-title'>
+     Evolution of US debt owns by foreign countries over the years
+   </h2>
+
+
+   <div id='lineschart'>
+   </div>
+
+   <script src='multilines.js'></script>
+
+   <p>Because of the huge quantity of US debt owned by Japan and China, there is still a fear that they might sell their shares which would hurt America’s economy. In 2016, China sold a vast amount of US debt but then changed its strategy again the next year. But experts believe China won't sell its part of the US debt again because it serves the country's interests to keep the value of the US dollar low.
+</p>
+
+ </div>
+
+  </body>
+</html>

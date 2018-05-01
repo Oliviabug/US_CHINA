@@ -1,0 +1,109 @@
+body {
+  background-color: aliceBlue;
+}
+
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-family: sans-serif;
+}
+
+.title img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+/* main section which includes the report and the d3 graphs */
+
+.article {
+  margin-top: 5rem;
+}
+
+.article p {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+/* css code to make my svg responsive */
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 90%;
+    margin-left: 5rem;
+    padding-bottom: 50%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    /*left: 50;*/
+}
+
+.graph-annotations {
+  font-size: .8rem;
+  font-style: italic;
+  margin-left: -8vw;
+
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 15vw;
+  height: 10vh;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightGrey;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+#areachart {
+  margin-bottom: 3vh;
+}
+
+#treemap {
+  margin-bottom: 5rem;
+
+}
+
+#treemap-title {
+  margin-left: 8vw;
+    margin-top: 5vw;
+}
+
+#areachart-title {
+  margin: 5vw 0 0 17vw;
+}
+
+#lineschart-title {
+    margin: 5vw 0 0 17vw;
+}
+
+@media(max-width: 1200px) {
+
+  .article p {
+    margin-left: 10vw;
+    margin-right: 0rem;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
+@media(max-width: 500px) {
+  .article p {
+    margin: 1rem 1rem 1rem 1rem
+  }
+}
