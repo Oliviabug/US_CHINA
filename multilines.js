@@ -1,10 +1,12 @@
-var width3 = 400;
+(function () {
+
+var width3 = 420;
 var height3 = 250;
 
 var margin3 = {
   top: 20,
-  right: 70,
-  left: 60,
+  right: 90,
+  left: 80,
   bottom: 50
 }
 
@@ -15,7 +17,7 @@ var svg3 = d3.select("div#lineschart")
    .append("svg")
    //responsive SVG needs these 2 attributes and no width and height attr
    .attr("preserveAspectRatio", "xMinYMin meet")
-   .attr("viewBox", "0 0 400 250")
+   .attr("viewBox", "0 0 450 250")
    //class to make it responsive
    .classed("svg-content-responsive", true);
 
@@ -121,23 +123,6 @@ d3.csv('US-debt-over-year.csv', function(error, data){
 
 color.domain(countries.map(function(d){ return d.id; }));
 
-// Call the axis
-g3.append("g")
-   .attr("class", "axis axis--x")
-   .attr("transform", "translate(0," + height_axis + ")")
-   .call(d3.axisBottom(x_scale));
-
-g3.append("g")
-   .attr("class", "axis axis--y")
-   .call(d3.axisLeft(y_scale))
- .append("text")
-   .attr("transform", "rotate(-90)")
-   .attr("y", 2)
-   .attr("dy", "0.71em")
-   .attr("fill", "#000")
-   .attr('font-size', '0.7em')
-   .text("Debt owned in $million");
-
 
 // Call the lines
    var country = g3.selectAll(".country")
@@ -152,7 +137,7 @@ g3.append("g")
               .attr("x", 3)
               .attr('id', function(d){ return 'label-' + d.id; })
               .attr("dy", "0.35em")
-              .style("font", "11px sans-serif")
+              .style("font", "11px Times")
               .style("opacity", function(d){
                 if(d.id === 'China' || d.id === 'Japan') {
                   return 1
@@ -233,7 +218,29 @@ g3.append("g")
 
 
 
+       // Call the axis
+       g3.append("g")
+           .style("font-size", "8px")
+           .style("font-weight", "")
+           .style("font-family", "Times")
+          // .attr("class", "axis axis--x")
+          .attr("transform", "translate(0," + height_axis + ")")
+          .call(d3.axisBottom(x_scale));
 
+       g3.append("g")
+           .style("font-size", "8px")
+            .style("font-family", "Times")
+          // .attr("class", "axis axis--y")
+          .call(d3.axisLeft(y_scale))
+        .append("text")
+          .attr("transform", "rotate(-90)")
+          .attr("y", 2)
+          .attr("dy", "0.71em")
+          .attr("fill", "#000")
+          .style('font-size', '0.8em')
+          .text("Debt owned in $million");
 
 
 })
+
+})()

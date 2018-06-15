@@ -1,11 +1,13 @@
-var width = 700;
-var height = 450;
+(function () {
+
+var width = 420;
+var height = 250;
 
 var margin = {
   top: 20,
-  right: 0,
-  left: 120,
-  bottom: 30
+  right: 70,
+  left: 90,
+  bottom: 50
 }
 
 //piece of code to append a svg and make it responsive
@@ -15,7 +17,7 @@ var svg = d3.select("div#areachart")
    .append("svg")
    //responsive SVG needs these 2 attributes and no width and height attr
    .attr("preserveAspectRatio", "xMinYMin meet")
-   .attr("viewBox", "0 0 900 500")
+   .attr("viewBox", "0 0 450 250")
    //class to make it responsive
    .classed("svg-content-responsive", true);
 
@@ -95,7 +97,7 @@ d3.csv('china-focus.csv', function(error, data){
         .attr("class", "line")
         .style('fill', 'none')
         .style('stroke', 'rgb(251,  128, 114)')
-        .style('stroke-width', '5px')
+        .style('stroke-width', '2px')
         .attr("d", valueline);
 
   // Add the valueline2 path.
@@ -103,16 +105,20 @@ d3.csv('china-focus.csv', function(error, data){
       .datum(data)
       .attr("class", "line")
       .style('fill', 'none')
-      .style('stroke-width', '5px')
+      .style('stroke-width', '2px')
       .style("stroke", "rgb(141, 211, 199)")
       .attr("d", valueline2);
 
 // call my axis
       g.append("g")
+          .style("font-size", "8px")
+          .style("font-family", "Times")
           .attr("transform", "translate(0," + height + ")")
           .call(d3.axisBottom(x));
 
       g.append("g")
+          .style("font-size", "8px")
+          .style("font-family", "Times")
           .call(d3.axisLeft(y))
         .append("text")
           .attr("fill", "#000")
@@ -136,36 +142,36 @@ d3.csv('china-focus.csv', function(error, data){
 // append additional text
     var labels = svg.append('g')
     labels.append('text')
-      .attr("x", "510px")
-       .attr("y", '240px')
+      .attr("x", "255px")
+       .attr("y", '120px')
        .attr('width', '30px')
        .attr('height', '90px')
        .style('font-weight', 'bold')
-       .style('font-family', 'sans-serif')
-       .style('font-size', '15px')
+       .style('font-family', 'Times')
+       .style('font-size', '8px')
        .text( '$375 billion of trade deficit');
 
 // Import label
      labels.append('text')
-       .attr("x", "630px")
-        .attr("y", '20px')
+       .attr("x", "320px")
+        .attr("y", '18px')
         .attr('width', '30px')
         .attr('height', '90px')
         .style('font-weight', 'bold')
-        .style('font-family', 'sans-serif')
-        .style('font-size', '16px')
+        .style('font-family', 'Times')
+        .style('font-size', '9px')
        .style('fill', 'rgb(251,  128, 114)')
         .text( 'Import');
 
 // export label
         labels.append('text')
-          .attr("x", "640px")
-           .attr("y", '310px')
+          .attr("x", "320px")
+           .attr("y", '170px')
            .attr('width', '30px')
            .attr('height', '90px')
            .style('font-weight', 'bold')
-           .style('font-family', 'sans-serif')
-           .style('font-size', '16px')
+           .style('font-family', 'Times')
+           .style('font-size', '9px')
           .style('fill', 'rgb(141, 211, 199)')
            .text( 'Export');
 
@@ -173,3 +179,5 @@ d3.csv('china-focus.csv', function(error, data){
 
 
  });
+
+ })()

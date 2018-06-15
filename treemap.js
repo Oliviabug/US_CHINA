@@ -190,6 +190,7 @@ nodes.merge(new_nodes)
               })
               .attr("dx", +50)
               .attr("dy", "1.25em")
+              .attr("font-family", "Times")
               .attr('font-size', function(d){
                 if(d.parent.data.key === 'China' || d.parent.data.key === 'Japan') {
                   return '28px'
@@ -201,7 +202,7 @@ nodes.merge(new_nodes)
               })
               .attr("text-anchor", "middle")
               .style("fill", 'black')
-              .style('font-family', 'sans-serif')
+              .style('font-family', 'Times')
               .html(function(d) {
                 if(d.parent.data.key === 'United-Arab-Emirates') {
                   return 'UAE'

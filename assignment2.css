@@ -8,7 +8,8 @@ h1 {
 }
 
 h2 {
-  font-family: sans-serif;
+  font-family: Times;
+  font-size: 1.3rem;
 }
 
 .title img {
@@ -50,12 +51,12 @@ h2 {
     /*left: 50;*/
 }
 
-.graph-annotations {
+/*.graph-annotations {
   font-size: .8rem;
   font-style: italic;
-  margin-left: -8vw;
+  margin-left: -12vw;
 
-}
+}*/
 
 div.tooltip {
   position: absolute;
@@ -91,6 +92,7 @@ div.tooltip {
 #lineschart-title {
     margin: 5vw 0 0 17vw;
 }
+
 
 @media(max-width: 1200px) {
 
